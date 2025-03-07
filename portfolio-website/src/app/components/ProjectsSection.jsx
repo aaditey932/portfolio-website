@@ -7,21 +7,39 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Dataset Project",
-    description: "This project focuses on analyzing website data to detect potential phishing characteristics based on various features extracted from HTML content, SSL/TLS certificates, IP reputation, and CSS and JavaScript structures. Through text analysis, structural patterns, and network features, this project aims to enhance automated detection of phishing sites and improve online security.",
-    image: "/images/projects/dataset.webp",
+    title: "AI-Powered RAG: Nutrition Text Assistant",
+    description: "This project implements an AI-powered Retrieval-Augmented Generation (RAG) system designed to extract relevant information from scientific research papers and generate insightful responses. Using Pinecone, OpenAI's GPT-4o, and Streamlit, the system enhances accessibility to scientific knowledge in human nutrition.",
+    image: "/images/projects/nutrition-rag-app.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/aaditey932/AIPI-510-Dataset-Project",
-    previewUrl: "/",
+    gitUrl: "https://github.com/aaditey932/rag-app",
+    previewUrl: "/"
   },
   {
     id: 2,
-    title: "Weakly Supervised Road Segmentation",
-    description: "Developed a system using satellite images and weakly supervised learning to detect and segment road areas. Improved image quality through preprocessing, feature extraction, and logistic regression, leading to high accuracy. This system can be applied in areas like autonomous driving, city planning, and traffic management.",
-    image: "/images/projects/satellite.jpg",
+    title: "Transformer Model From Scratch",
+    description: "This project contains a from-scratch implementation of the Transformer architecture using NumPy. The model is inspired by the paper 'Attention is All You Need' and implements multi-head self-attention, positional encoding, feed-forward networks, and masking. It provides a fundamental understanding without relying on deep learning frameworks.",
+    image: "/images/projects/transformer-model-from-scratch.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/aaditey932/Weakly-Supervised-Road-Segmentation",
-    previewUrl: "/",
+    gitUrl: "https://github.com/aaditey932/transformer-from-scratch",
+    previewUrl: "/"
+  },
+  {
+    id: 3,
+    title: "Retinal Fundus Disorder Detection",
+    description: "This project implements a retinal fundus image classification system using three approaches; naive approach, traditional machine learning and deep learning models. The goal is to analyze and classify retinal images to identify potential disorders such as Diabetic Retinopathy, Glaucoma, AMD, Cataracts, etc.",
+    image: "/images/projects/front-view-human-eye.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/aaditey932/retinal-fundus-disorder-detection",
+    previewUrl: "/"
+  },
+  {
+    id: 4,
+    title: "Phishing URL Content Dataset",
+    description: "This project focuses on analyzing website data to detect potential phishing characteristics based on various features extracted from HTML content, SSL/TLS certificates, IP reputation, and CSS and JavaScript structures. Through text analysis, structural patterns, and network features, this project aims to enhance automated detection of phishing sites and improve online security.",
+    image: "/images/projects/phishing-url-content-dataset.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/aaditey932/AIPI-510-Dataset-Project",
+    previewUrl: "/"
   }
   
 ];

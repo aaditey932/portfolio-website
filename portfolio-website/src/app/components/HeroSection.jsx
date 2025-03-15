@@ -39,8 +39,8 @@ const HeroSection = () => {
           <div>
            
             <Link
-              href="https://drive.google.com/file/d/1dUXCS6EMMVVyVq046_koHbbXMTyEodH1/view?usp=sharing"
-              download='https://drive.google.com/file/d/1dUXCS6EMMVVyVq046_koHbbXMTyEodH1/view?usp=sharing'
+              href="https://drive.google.com/file/d/1Qy9_nb_C8E-NIdb23DWWn1QmYyl8TdLV/view?usp=sharing"
+              download='https://drive.google.com/file/d/1Qy9_nb_C8E-NIdb23DWWn1QmYyl8TdLV/view?usp=sharing'
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
@@ -60,8 +60,8 @@ const HeroSection = () => {
               src="/images/View recent photos.jpeg"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
-              width={300}
-              height={300}
+              width={400}
+              height={400}
             />
           </div>
         </motion.div>

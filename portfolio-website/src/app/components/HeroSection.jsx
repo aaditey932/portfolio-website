@@ -9,6 +9,7 @@ const HeroSection = () => {
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
+        {/* Left Section - Text */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -37,10 +38,9 @@ const HeroSection = () => {
             />
           </h1>
           <div>
-           
             <Link
               href="https://drive.google.com/file/d/1Qy9_nb_C8E-NIdb23DWWn1QmYyl8TdLV/view?usp=sharing"
-              download='https://drive.google.com/file/d/1Qy9_nb_C8E-NIdb23DWWn1QmYyl8TdLV/view?usp=sharing'
+              download="Aaditey_Pillai_CV.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
@@ -49,17 +49,19 @@ const HeroSection = () => {
             </Link>
           </div>
         </motion.div>
+
+        {/* Right Section - Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-full overflow-hidden shadow-lg">
             <Image
               src="/images/View recent photos.jpeg"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+              className="absolute w-full h-full object-cover"
               width={400}
               height={400}
             />

@@ -10,7 +10,7 @@ const experiencesData = [
     company: "Celusion Technologies",
     role: "Machine Learning Intern",
     description: "Worked on data preprocessing, feature engineering, and model optimization, leading to improved inference times and accuracy.",
-    image: "/images/experiences/celusion_logo.jpg",
+    image: "/images/Experiences/celusion_logo.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://www.celusion.com",
     previewUrl: "/"
@@ -20,7 +20,7 @@ const experiencesData = [
     company: "BSE Technologies",
     role: "Cybersecurity Intern",
     description: "Configured and maintained SIEM systems, investigated incidents, and collaborated with security teams to enhance threat detection.",
-    image: "/images/experiences/bse_logo.jpg",
+    image: "/images/Experiences/bse_logo.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://www.bsetech.in",
     previewUrl: "/"

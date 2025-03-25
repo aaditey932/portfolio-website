@@ -40,6 +40,15 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/aaditey932/AIPI-510-Dataset-Project",
     previewUrl: "/"
+  },
+  {
+    id: 5,
+    title: "LlaMa-Resume-Optimizer",
+    description: "This project helps students and job seekers instantly optimize resumes based on job descriptions. It combines keyword matching, similarity scoring, and LLaMA 3 (fine-tuned with LoRA) to generate ATS-friendly edits. The system suggests impactful improvements and allows users to download optimized resumes via a Streamlit web app.",
+    image: "/images/projects/llama-optimizer.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/aaditey932/llm-resume-optimizer/tree/main",
+    previewUrl: "/"
   }
   
 ];

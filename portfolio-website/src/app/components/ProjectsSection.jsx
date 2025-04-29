@@ -45,7 +45,7 @@ const projectsData = [
     id: 5,
     title: "Frame-Finder",
     description: "An AI-powered art recognition app that identifies paintings from photos using CLIP embeddings and vector search with Pinecone. Frame-Finder matches artworks from a curated database and generates detailed explanations using a large language model. Built with Streamlit for an interactive user experience.",
-    image: "/images/projects/frame-finder.jpg",
+    image: "/images/projects/frame-finder.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/aaditey932/frame-finder",
     previewUrl: "/"

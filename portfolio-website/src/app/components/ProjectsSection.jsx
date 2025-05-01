@@ -11,7 +11,7 @@ const projectsData = [
     description: "An LLM fine-tuning project that removes censorship and bias from a DeepSeek-R1 model using LoRA. Features include a Streamlit-based interface for comparing base and fine-tuned models and automated evaluation with Google Gemini. The system evaluates responses on factual accuracy, completeness, bias, and overall quality.",
     image: "/images/projects/deepseek-uncensored.png",
     tag: ["All", "AI", "NLP"],
-    gitUrl: "https://github.com/aaditey932/Deepseek-Censorship-Removal",
+    gitUrl: "https://deepseek-censorship-removal.streamlit.app",
     previewUrl: "/demos/deepseek-uncensored"
   },
   {

@@ -39,7 +39,7 @@ const HeroSection = () => {
           </h1>
           <div>
             <Link
-              href="https://drive.google.com/file/d/1KaSfoOBhliNCBqA5cAWWB3H8-D3EsREX/view?usp=share_link"
+              href="https://drive.google.com/file/d/1JUkbIsZHPuZLXNPBFT6yfl39_Q1w-qeF/view?usp=share_link"
               download="Aaditey_Pillai_CV.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >

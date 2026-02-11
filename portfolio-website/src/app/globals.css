@@ -66,3 +66,18 @@ body {
 #projects {
   scroll-margin-top: 5.5rem;
 }
+
+/* Hero load: blur-in keyframe (used with Framer for position/opacity) */
+@keyframes hero-blur-in {
+  from {
+    filter: blur(12px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+.hero-blur-in-left,
+.hero-blur-in-right {
+  animation: hero-blur-in 0.6s ease-out forwards;
+}

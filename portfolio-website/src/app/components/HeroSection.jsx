@@ -1,29 +1,65 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
+
+const HERO_IMAGE_URL =
+  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&fm=jpg&q=60&w=3000";
+
+const HEADLINE_WORDS = ["AI", "ML", "LLM", "SOFTWARE"];
+const HEADLINE_INTERVAL_MS = 2000;
+
+const heroLoadTransition = { duration: 0.6, ease: [0.22, 1, 0.36, 1] };
 
 export default function HeroSection() {
+  const [headlineIndex, setHeadlineIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (reduceMotion) return;
+    const id = setInterval(() => {
+      setHeadlineIndex((i) => (i + 1) % HEADLINE_WORDS.length);
+    }, HEADLINE_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, [reduceMotion]);
+
+  const headlineWord = HEADLINE_WORDS[headlineIndex];
+
   return (
-    <section className="relative w-full min-h-[85vh] flex items-center px-6 sm:px-10 lg:px-16 pt-24 pb-16">
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16 xl:gap-20">
-        {/* Left column — text content (Poppins for headline match) */}
-        <div className="max-w-4xl flex-shrink-0 font-poppins">
+    <section className="relative w-full min-h-[85vh] flex items-center px-6 sm:px-10 lg:px-16 pt-20 pb-12">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-10 xl:gap-12">
+        {/* Left column — text content, blur in from the left */}
+        <motion.div
+          className="max-w-4xl flex-shrink-0 font-poppins hero-blur-in-left"
+          initial={{ opacity: 0, x: -48 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={heroLoadTransition}
+        >
           {/* Greeting — Futura No. 2 Std style, bright cyan, slightly larger */}
           <p className="font-futura text-lg sm:text-xl text-cyan-300 font-medium mb-4 sm:mb-6 tracking-tight">
             Hello! I&apos;m Aaditey
           </p>
 
-          {/* Headline — Gotham Bold, stacked, vertical gradient */}
+          {/* Headline — Gotham Bold, cycling word + ENGINEER, vertical gradient */}
           <div
-            className="font-gotham flex flex-col leading-[0.85] tracking-tight mb-5 sm:mb-6 font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl bg-[linear-gradient(to_bottom,white_0%,white_52%,rgb(107_114_128)_100%)] bg-clip-text text-transparent"
+            className="font-gotham flex flex-col leading-[0.85] tracking-tight mb-5 sm:mb-6 font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl bg-[linear-gradient(to_bottom,white_0%,white_52%,rgb(107_114_128)_100%)] bg-clip-text text-transparent overflow-visible"
           >
-            <span>AI</span>
+            <span
+              className="inline-block min-h-[1em] min-w-[5ch] sm:min-w-[6ch] md:min-w-[8ch] lg:min-w-[9ch] xl:min-w-[10ch] overflow-visible"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              {headlineWord}
+            </span>
             <span>ENGINEER</span>
           </div>
 
           {/* Supporting paragraph — Nunito */}
           <p className="font-nunito text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed mb-10 sm:mb-12">
-            I build intelligent systems, chatbots, and modern web applications.
-            Bridging the gap between complex AI logic and beautiful user
-            interfaces.
+            MEng in AI at Duke. I turn messy data into reliable ML systems—entity
+            extraction, risk-scoring, and pipelines that ship. Seeking Co-Op and
+            full-time roles for Spring 2026.
           </p>
 
           {/* CTA buttons */}
@@ -55,23 +91,26 @@ export default function HeroSection() {
               View Work
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right column — laptop / code image */}
-        <div className="flex-shrink-0 lg:w-[55%] xl:w-[52%] flex items-center justify-center">
-          <div className="relative w-full max-w-[40rem] xl:max-w-[46rem] aspect-square rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 ring-1 ring-white/10">
+        {/* Right column — hero image, blur in from the right */}
+        <motion.div
+          className="hidden lg:flex flex-1 min-w-0 justify-center items-center hero-blur-in-right"
+          initial={{ opacity: 0, x: 48 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={heroLoadTransition}
+        >
+          <div className="relative w-full max-w-2xl xl:max-w-3xl 2xl:max-w-4xl aspect-[3.5/4] grayscale">
             <Image
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&fm=jpg&q=60&w=3000"
-              alt="Laptop displaying code in a dark-themed editor"
+              src={HERO_IMAGE_URL}
+              alt=""
               fill
-              className="object-cover grayscale"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              className="object-cover rounded-lg"
+              sizes="(min-width: 1024px) 28vw, (min-width: 1280px) 32rem"
               priority
             />
-            {/* Subtle cinematic gradient overlay for depth */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

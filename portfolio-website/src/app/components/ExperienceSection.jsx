@@ -62,7 +62,7 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience">
-      <h2 className="text-center text-4xl font-bold text-green-900 mb-1 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-green-950 mb-1 md:mb-12">
         My Experiences
       </h2>
       <ul ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">

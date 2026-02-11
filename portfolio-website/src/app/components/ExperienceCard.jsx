@@ -39,16 +39,21 @@ const ExperienceCard = ({ company, role, description, imgUrl, gitUrl, previewUrl
       </div>
 
       {/* Content block - compact when collapsed, grows when expanded */}
-      <div className="flex flex-col mt-3">
+      <motion.div
+        className="flex flex-col mt-3 overflow-hidden"
+        layout
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      >
         <AnimatePresence mode="wait" initial={false}>
           {!expanded ? (
             <motion.div
               key="collapsed"
-              initial={{ opacity: 0, y: -8 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
               className="flex flex-col gap-3"
+              layout
             >
               <div>
                 <h5 className="text-2xl text-center font-semibold text-[#e5ebe0]">{company}</h5>
@@ -66,11 +71,12 @@ const ExperienceCard = ({ company, role, description, imgUrl, gitUrl, previewUrl
           ) : (
             <motion.div
               key="expanded"
-              initial={{ opacity: 0, y: -8 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
-              className="flex flex-col"
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              className="flex flex-col origin-top"
+              layout
             >
               <h5 className="text-2xl text-center font-semibold text-[#e5ebe0]">{company}</h5>
               <p className="text-base text-center text-[#e5ebe0] mb-2">{role}</p>
@@ -79,9 +85,14 @@ const ExperienceCard = ({ company, role, description, imgUrl, gitUrl, previewUrl
                   <motion.li
                     key={index}
                     className="leading-relaxed"
-                    initial={{ opacity: 0, x: -6 }}
+                    initial={{ opacity: 0, x: -12 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.2, delay: index * 0.06 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 30,
+                      delay: index * 0.05,
+                    }}
                   >
                     {point}
                   </motion.li>
@@ -98,7 +109,7 @@ const ExperienceCard = ({ company, role, description, imgUrl, gitUrl, previewUrl
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

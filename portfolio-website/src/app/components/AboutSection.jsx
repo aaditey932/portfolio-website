@@ -65,7 +65,7 @@ const AboutSection = () => {
           transition={{ duration: duration + 0.1, ease: "easeOut" }}
         >
           <Image
-            src="/images/NC-01-063-0006_001.jpg"
+            src="/images/IMG_2602 2.jpg"
             width={500}
             height={500}
             alt="Portrait of Aaditey Pillai"

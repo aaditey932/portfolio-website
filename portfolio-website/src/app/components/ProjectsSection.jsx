@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const projectsData = [
   {
@@ -120,34 +120,42 @@ const ProjectsSection = () => {
   );
 
   const cardVariants = {
-    initial: { y: 50, opacity: 0 },
+    initial: { y: 40, opacity: 0 },
     animate: { y: 0, opacity: 1 },
   };
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-gray-900 mt-12 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-green-950 mt-12 mb-8 md:mb-12">
         My Projects
       </h2>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project, index) => (
+            <motion.li
               key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
+              layout
+              variants={cardVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{
+                layout: { type: "spring", stiffness: 350, damping: 30 },
+                opacity: { duration: 0.25 },
+                y: { type: "spring", stiffness: 300, damping: 24 },
+                delay: isInView ? index * 0.08 : 0,
+              }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </motion.li>
+          ))}
+        </AnimatePresence>
       </ul>
     </section>
   );

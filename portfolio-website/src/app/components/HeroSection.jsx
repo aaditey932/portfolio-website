@@ -1,107 +1,78 @@
-"use client";
-import React from "react";
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
-import Link from "next/link";
 
-const HERO_BG_IMAGE = "/images/1927191056-f546fc57d0682a2841dc9fe4bbb653bf7f1afcc92ec0c937d05aa422fc5c2d5a-d.webp";
-
-const HeroSection = () => {
+export default function HeroSection() {
   return (
-    <section className="relative min-h-[70vh] overflow-hidden">
-      {/* Parallax background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${HERO_BG_IMAGE})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
-      />
-      {/* Black overlay */}
-      <div className="absolute inset-0 z-[1] bg-black/40" aria-hidden="true" />
-      {/* Content above overlay */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 lg:py-16 flex min-h-[70vh] items-center">
-      <div className="grid grid-cols-1 sm:grid-cols-12 w-full">
-        {/* Left Section - Text */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m{" "}
-            </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                "Aaditey Pillai",
-                1000,
-                "An AI Engineer",
-                1000,
-                "A Gamer",
-                1000,
-                "An Audiophile",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </h1>
-          <div>
-            <Link
-              href="https://drive.google.com/file/d/1R3x5vcte2e9DqQlIo0EvBhloSTJUWFwu/view?usp=share_link"
-              download="Aaditey_Pillai_CV.pdf"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                View Resume
-              </span>
-            </Link>
-          </div>
-        </motion.div>
+    <section className="relative w-full min-h-[85vh] flex items-center px-6 sm:px-10 lg:px-16 pt-24 pb-16">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16 xl:gap-20">
+        {/* Left column — text content (Poppins for headline match) */}
+        <div className="max-w-4xl flex-shrink-0 font-poppins">
+          {/* Greeting — Futura No. 2 Std style, bright cyan, slightly larger */}
+          <p className="font-futura text-lg sm:text-xl text-cyan-300 font-medium mb-4 sm:mb-6 tracking-tight">
+            Hello! I&apos;m Aaditey
+          </p>
 
-        {/* Right Section - Image (shifted left, animated) */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: [0, -12, 0],
-          }}
-          transition={{
-            opacity: { duration: 0.5 },
-            scale: { duration: 0.5 },
-            y: {
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            },
-          }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0 lg:-ml-16 xl:-ml-24"
-        >
-          <div className="p-4 bg-white rounded-full shadow-lg">
-            <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-full overflow-hidden ring-2 ring-gray-200/80">
-            <Image
-              src="/images/upscalemedia-transformed.png"
-              alt="hero image"
-              className="absolute w-full h-full object-cover"
-              width={400}
-              height={400}
-            />
-            </div>
+          {/* Headline — Gotham Bold, stacked, vertical gradient */}
+          <div
+            className="font-gotham flex flex-col leading-[0.85] tracking-tight mb-5 sm:mb-6 font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl bg-[linear-gradient(to_bottom,white_0%,white_52%,rgb(107_114_128)_100%)] bg-clip-text text-transparent"
+          >
+            <span>AI</span>
+            <span>ENGINEER</span>
           </div>
-        </motion.div>
-      </div>
+
+          {/* Supporting paragraph — Nunito */}
+          <p className="font-nunito text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed mb-10 sm:mb-12">
+            I build intelligent systems, chatbots, and modern web applications.
+            Bridging the gap between complex AI logic and beautiful user
+            interfaces.
+          </p>
+
+          {/* CTA buttons */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-black transition hover:bg-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black"
+            >
+              Hire Me
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#projects"
+              className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10 hover:border-white/35 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-black"
+            >
+              View Work
+            </a>
+          </div>
+        </div>
+
+        {/* Right column — laptop / code image */}
+        <div className="flex-shrink-0 lg:w-[55%] xl:w-[52%] flex items-center justify-center">
+          <div className="relative w-full max-w-[40rem] xl:max-w-[46rem] aspect-square rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 ring-1 ring-white/10">
+            <Image
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&fm=jpg&q=60&w=3000"
+              alt="Laptop displaying code in a dark-themed editor"
+              fill
+              className="object-cover grayscale"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              priority
+            />
+            {/* Subtle cinematic gradient overlay for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+          </div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

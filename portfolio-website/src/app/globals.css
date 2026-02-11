@@ -2,9 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Futura No. 2 Std Medium — add font file to public/fonts/ to use; otherwise Nunito is used as fallback */
+@font-face {
+  font-family: 'Futura No. 2 Std';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Futura No. 2 Std Medium'),
+       local('FuturaNo2Std-Medium'),
+       url('/fonts/FuturaNo2Std-Medium.woff2') format('woff2'),
+       url('/fonts/FuturaNo2Std-Medium.woff') format('woff');
+}
+
+/* Gotham Bold — add font file to public/fonts/ to use; otherwise Poppins is used as fallback for headline */
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Gotham Bold'),
+       local('Gotham-Bold'),
+       url('/fonts/Gotham-Bold.woff2') format('woff2'),
+       url('/fonts/Gotham-Bold.woff') format('woff');
+}
+
+/* Satoshi Black — add font file to public/fonts/ to use; otherwise Poppins is used as fallback for headline */
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Satoshi Black'),
+       local('Satoshi-Black'),
+       url('/fonts/Satoshi-Black.woff2') format('woff2'),
+       url('/fonts/Satoshi-Black.woff') format('woff');
+}
+
+/* Equitan Sans — add font file to public/fonts/ to use; otherwise system-ui is used as fallback */
+@font-face {
+  font-family: 'Equitan Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Equitan Sans'),
+       local('EquitanSans'),
+       url('/fonts/EquitanSans.woff2') format('woff2'),
+       url('/fonts/EquitanSans.woff') format('woff');
+}
+
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-rgb: 229, 235, 224; /* light sage green */
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
 }
 
 body {

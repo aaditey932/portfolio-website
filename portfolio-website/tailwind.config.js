@@ -8,6 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        gotham: ["Gotham", "var(--font-poppins)", "sans-serif"],
+        satoshi: ["Satoshi", "var(--font-poppins)", "sans-serif"],
+        nunito: ["var(--font-nunito)", "sans-serif"],
+        futura: ["Futura No. 2 Std", "var(--font-nunito)", "sans-serif"],
+        equitan: ["Equitan Sans", "system-ui", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -57,9 +57,12 @@ export default function HeroSection() {
 
           {/* Supporting paragraph — Nunito */}
           <p className="font-nunito text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed mb-10 sm:mb-12">
-            MEng in AI at Duke. I turn messy data into reliable ML systems—entity
-            extraction, risk-scoring, and pipelines that ship. Seeking Co-Op and
-            full-time roles for Spring 2026.
+            <strong className="font-semibold text-gray-300">MEng in AI @ Duke University</strong>
+            <br />
+            AI engineer building reliable, production LLM systems.
+            <br />
+            Focused on evaluation, agentic pipelines, and AI that&apos;s
+            useful, scalable, and quietly dependable.
           </p>
 
           {/* CTA buttons */}
@@ -85,10 +88,12 @@ export default function HeroSection() {
               </svg>
             </a>
             <a
-              href="#projects"
+              href="https://drive.google.com/file/d/1R3x5vcte2e9DqQlIo0EvBhloSTJUWFwu/view?usp=share_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10 hover:border-white/35 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-black"
             >
-              View Work
+              View Resume
             </a>
           </div>
         </motion.div>
@@ -100,7 +105,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={heroLoadTransition}
         >
-          <div className="relative w-full max-w-2xl xl:max-w-3xl 2xl:max-w-4xl aspect-[3.5/4] grayscale">
+          <div className="relative w-full max-w-4xl xl:max-w-5xl 2xl:max-w-6xl aspect-[3.5/5] grayscale">
             <Image
               src={HERO_IMAGE_URL}
               alt=""

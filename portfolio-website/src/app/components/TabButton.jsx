@@ -6,12 +6,15 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
-
+const TabButton = ({ active, selectTab, children, id, ariaSelected }) => {
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+    <button
+      id={id}
+      role="tab"
+      aria-selected={ariaSelected}
+      onClick={selectTab}
+    >
+      <p className="mr-3 font-semibold text-green-950 hover:text-green-950">
         {children}
       </p>
       <motion.div

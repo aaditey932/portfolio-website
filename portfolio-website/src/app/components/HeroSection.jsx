@@ -5,10 +5,27 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const HERO_BG_IMAGE = "/images/1927191056-f546fc57d0682a2841dc9fe4bbb653bf7f1afcc92ec0c937d05aa422fc5c2d5a-d.webp";
+
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section className="relative min-h-[70vh] overflow-hidden">
+      {/* Parallax background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${HERO_BG_IMAGE})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      />
+      {/* Black overlay */}
+      <div className="absolute inset-0 z-[1] bg-black/40" aria-hidden="true" />
+      {/* Content above overlay */}
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 lg:py-16 flex min-h-[70vh] items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-12 w-full">
         {/* Left Section - Text */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -25,7 +42,7 @@ const HeroSection = () => {
               sequence={[
                 "Aaditey Pillai",
                 1000,
-                "An ML Engineer",
+                "An AI Engineer",
                 1000,
                 "A Gamer",
                 1000,
@@ -39,7 +56,7 @@ const HeroSection = () => {
           </h1>
           <div>
             <Link
-              href="https://drive.google.com/file/d/1JUkbIsZHPuZLXNPBFT6yfl39_Q1w-qeF/view?usp=share_link"
+              href="https://drive.google.com/file/d/1R3x5vcte2e9DqQlIo0EvBhloSTJUWFwu/view?usp=share_link"
               download="Aaditey_Pillai_CV.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
@@ -50,23 +67,38 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Right Section - Image */}
+        {/* Right Section - Image (shifted left, animated) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0 lg:ml-100"
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: [0, -12, 0],
+          }}
+          transition={{
+            opacity: { duration: 0.5 },
+            scale: { duration: 0.5 },
+            y: {
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+          className="col-span-4 place-self-center mt-4 lg:mt-0 lg:-ml-16 xl:-ml-24"
         >
-          <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-full overflow-hidden shadow-lg">
+          <div className="p-4 bg-white rounded-full shadow-lg">
+            <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-full overflow-hidden ring-2 ring-gray-200/80">
             <Image
-              src="/images/View recent photos.jpeg"
+              src="/images/upscalemedia-transformed.png"
               alt="hero image"
               className="absolute w-full h-full object-cover"
               width={400}
               height={400}
             />
+            </div>
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   );

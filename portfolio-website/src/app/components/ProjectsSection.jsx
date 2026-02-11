@@ -6,13 +6,22 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 1,
-    title: "DeepSeek-Uncensored",
-    description: "An LLM fine-tuning project that removes censorship and bias from a DeepSeek-R1 model using LoRA. Features include a Streamlit-based interface for comparing base and fine-tuned models and automated evaluation with Google Gemini. The system evaluates responses on factual accuracy, completeness, bias, and overall quality.",
-    image: "/images/projects/deepseek-uncensored.png",
-    tag: ["All", "AI", "NLP"],
-    gitUrl: "https://deepseek-censorship-removal.streamlit.app",
-    previewUrl: "/demos/deepseek-uncensored"
+    id: 10,
+    title: "MedGraph Scheduler",
+    description: "A multi-agent doctor appointment scheduler deployed on AWS EC2 using LangGraph and FastAPI, with a supervisor–worker architecture and csv-backed data, turning a spreadsheet into a single conversational interface. Implements ReAct-driven Groq/OpenAI agents validated by Pydantic schemas, enabling workers to ask clarifying questions, resolve slot conflicts, and exchange schema-perfect messages for coordination.",
+    image: "/images/projects/nutrition-rag-app.png",
+    tag: ["All", "Web", "AI"],
+    gitUrl: "https://github.com/aaditey932",
+    previewUrl: "/"
+  },
+  {
+    id: 11,
+    title: "TubeGist AI",
+    description: "Built a RAG chatbot for extracting and chunking information from YouTube videos, embedded with OpenAI text-embedding-3-small, and retrieved via FAISS, generating GPT-4o-mini answers within 10-20 seconds. Designed the pipeline in LangChain for rapid swaps of models or indexes, keeping latency under 1 second for retrieval and enabling context-aware Q&A without downloading the video.",
+    image: "/images/projects/nutrition-rag-app.png",
+    tag: ["All", "Web", "AI"],
+    gitUrl: "https://github.com/aaditey932/tubegist-ai",
+    previewUrl: "http://3.95.152.42:8501"
   },
   {
     id: 2,
@@ -22,6 +31,15 @@ const projectsData = [
     tag: ["All", "Web", "AI"],
     gitUrl: "https://github.com/aaditey932/Duke-Student-Advisor-Chatbot",
     previewUrl: "http://13.218.146.34:8503"
+  },
+  {
+    id: 1,
+    title: "DeepSeek-Uncensored",
+    description: "An LLM fine-tuning project that removes censorship and bias from a DeepSeek-R1 model using LoRA. Features include a Streamlit-based interface for comparing base and fine-tuned models and automated evaluation with Google Gemini. The system evaluates responses on factual accuracy, completeness, bias, and overall quality.",
+    image: "/images/projects/deepseek-uncensored.png",
+    tag: ["All", "AI", "NLP"],
+    gitUrl: "https://deepseek-censorship-removal.streamlit.app",
+    previewUrl: "/demos/deepseek-uncensored"
   },
   {
     id: 3,
@@ -108,7 +126,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-12 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-gray-900 mt-12 mb-8 md:mb-12">
         My Projects
       </h2>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

@@ -27,8 +27,8 @@ export default function HeroSection() {
   const headlineWord = HEADLINE_WORDS[headlineIndex];
 
   return (
-    <section className="relative w-full min-h-[85vh] flex items-center px-6 sm:px-10 lg:px-16 pt-20 pb-12">
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-10 xl:gap-12">
+    <section className="relative w-full min-h-[85vh] flex items-center pl-6 pr-2 sm:pl-10 sm:pr-4 lg:pl-16 lg:pr-6 pt-20 pb-12">
+      <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8 lg:gap-10 xl:gap-12">
         {/* Left column — text content, blur in from the left */}
         <motion.div
           className="max-w-4xl flex-shrink-0 font-poppins hero-blur-in-left"
@@ -105,7 +105,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={heroLoadTransition}
         >
-          <div className="relative w-full max-w-4xl xl:max-w-5xl 2xl:max-w-6xl aspect-[3.5/5] grayscale">
+          <div className="relative w-full max-w-4xl xl:max-w-5xl 2xl:max-w-6xl aspect-[3.5/3.5] grayscale">
             <Image
               src={HERO_IMAGE_URL}
               alt=""

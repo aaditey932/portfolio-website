@@ -1,0 +1,47 @@
+/* ===========================================================================
+   Typography tokens
+   Display = Poppins (Gotham fallback). UI/body = Inter. Geometric accent =
+   Nunito (Futura fallback). Mono = JetBrains Mono (signature technical voice).
+   =========================================================================== */
+
+:root {
+  /* ---- Families ------------------------------------------------------- */
+  --font-display:   'Poppins', 'Gotham', system-ui, sans-serif;
+  --font-sans:      'Inter', system-ui, -apple-system, sans-serif;
+  --font-geometric: 'Nunito', 'Futura No. 2 Std', system-ui, sans-serif;
+  --font-mono:      'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- Weights -------------------------------------------------------- */
+  --fw-regular:  400;  /* @kind font */
+  --fw-medium:   500;  /* @kind font */
+  --fw-semibold: 600;  /* @kind font */
+  --fw-bold:     700;  /* @kind font */
+
+  /* ---- Type scale (px-based, rem values) ------------------------------ */
+  --text-xs:   0.75rem;   /* 12 — mono meta, tiny labels   */
+  --text-sm:   0.875rem;  /* 14 — UI, captions             */
+  --text-base: 1rem;      /* 16 — body                     */
+  --text-lg:   1.125rem;  /* 18 — lead body                */
+  --text-xl:   1.375rem;  /* 22 — card titles              */
+  --text-2xl:  1.75rem;   /* 28 — sub-headings             */
+  --text-3xl:  2.25rem;   /* 36 — section titles           */
+  --text-4xl:  3rem;      /* 48 — large section            */
+  --text-5xl:  4rem;      /* 64 — hero (sm)                */
+  --text-6xl:  5.5rem;    /* 88 — hero (lg)                */
+  --text-display: 7rem;   /* 112 — hero headline (xl)      */
+
+  /* ---- Line heights --------------------------------------------------- */
+  --leading-none:    0.9;
+  --leading-tight:   1.1;
+  --leading-snug:    1.3;
+  --leading-normal:  1.55;
+  --leading-relaxed: 1.7;
+
+  /* ---- Letter spacing ------------------------------------------------- */
+  --tracking-tighter: -0.03em;  /* display headlines        */
+  --tracking-tight:   -0.015em; /* sub-heads                */
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-mono:    0.02em;   /* mono labels              */
+  --tracking-caps:    0.14em;   /* uppercase eyebrow labels */
+}

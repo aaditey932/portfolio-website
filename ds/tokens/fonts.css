@@ -1,0 +1,19 @@
+/* ===========================================================================
+   Fonts — Aaditey Pillai Design System
+   ---------------------------------------------------------------------------
+   The source site declares proprietary faces (Gotham Bold, Futura No. 2 Std,
+   Satoshi, Equitan Sans) but ships NO binaries — every face falls back to a
+   Google font (Poppins / Nunito / Inter) in layout.js + tailwind.config.js.
+   This system standardises on those real fallbacks, and ADDS JetBrains Mono as
+   the signature technical/terminal voice the dark/dev-forward direction calls
+   for (the original repo had no monospace).  All four are Google-hosted.
+
+   ⚠ SUBSTITUTIONS TO CONFIRM WITH OWNER:
+     • Gotham Bold  → Poppins 700      (headline)
+     • Futura No.2  → Nunito 600       (geometric greeting accent)
+     • JetBrains Mono is a NEW addition (no original mono font existed).
+   If you own the real licences, drop the .woff2 files in assets/fonts/ and
+   point these @font-face / @import targets at them.
+   =========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Nunito:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');

@@ -1,0 +1,74 @@
+/* ===========================================================================
+   Colors — dark / technical
+   Near-black base with a slight cool tint, a single cyan signature accent,
+   and a restrained semantic set. Lifted from the source site's true-black bg
+   + cyan-300 accent (Tailwind cyan-300 = #67E8F9), formalised into a scale.
+   =========================================================================== */
+
+:root {
+  /* ---- Base ink scale (page → elevated surfaces) ---------------------- */
+  --ink-950: #050608;   /* page background (true near-black, cool tint) */
+  --ink-900: #0B0E13;   /* default card / panel surface                */
+  --ink-850: #0F141B;   /* slightly raised surface                     */
+  --ink-800: #141A22;   /* raised / hover surface, code blocks         */
+  --ink-700: #1C232E;   /* strong fill / pressed surface               */
+  --ink-600: #2A323F;   /* solid borders on dark                       */
+  --pure-black: #000000;
+  --pure-white: #FFFFFF;
+
+  /* ---- Hairlines & overlays (translucent over ink) -------------------- */
+  --line:         rgba(255, 255, 255, 0.07);
+  --line-strong:  rgba(255, 255, 255, 0.13);
+  --line-accent:  rgba(103, 232, 249, 0.32);
+  --overlay-hover: rgba(255, 255, 255, 0.05);
+  --overlay-press: rgba(255, 255, 255, 0.09);
+  --scrim:        rgba(5, 6, 8, 0.82);
+
+  /* ---- Text ----------------------------------------------------------- */
+  --text-strong: #FFFFFF;   /* headlines                       */
+  --text:        #E6EAF1;   /* default body                    */
+  --text-muted:  #9BA3B0;   /* secondary / supporting          */
+  --text-faint:  #626B79;   /* captions, meta, placeholders    */
+  --text-disabled: #3D444F;
+
+  /* ---- Cyan signature accent ------------------------------------------ */
+  --cyan-200: #A5F3FC;  /* hover / lighter                 */
+  --cyan-300: #67E8F9;  /* PRIMARY accent (source site)    */
+  --cyan-400: #22D3EE;
+  --cyan-500: #06B6D4;  /* deeper, for solid fills on light*/
+  --cyan-700: #0E7490;
+  --cyan-glow: rgba(103, 232, 249, 0.22);
+
+  /* ---- Semantic status ------------------------------------------------ */
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger:  #F87171;
+  --info:    var(--cyan-300);
+
+  /* =====================================================================
+     Semantic aliases — reference these in components, not raw values
+     ===================================================================== */
+  --bg-page:        var(--ink-950);
+  --bg-nav:         var(--scrim);
+  --surface-card:   var(--ink-900);
+  --surface-raised: var(--ink-800);
+  --surface-sunken: var(--pure-black);
+  --surface-code:   var(--ink-800);
+
+  --border-subtle:  var(--line);
+  --border-default: var(--line-strong);
+  --border-solid:   var(--ink-600);
+  --border-focus:   var(--cyan-300);
+
+  --text-body:      var(--text);
+  --text-heading:   var(--text-strong);
+  --text-secondary: var(--text-muted);
+  --text-meta:      var(--text-faint);
+
+  --accent:         var(--cyan-300);
+  --accent-hover:   var(--cyan-200);
+  --accent-quiet:   var(--cyan-500);
+  --on-accent:      #021318;   /* text/icons sitting on a cyan fill */
+  --accent-tint:    rgba(103, 232, 249, 0.10);  /* faint cyan wash */
+  --focus-ring:     var(--cyan-glow);
+}

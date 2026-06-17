@@ -25,7 +25,7 @@ export default function HeroSection() {
       <div className="wrap" style={{ width: "100%" }}>
         <p className="greet">
           <span className="slash">{"//"}</span>
-          Hello — I&apos;m {portfolio.identity.name}
+          Hello, I&apos;m {portfolio.identity.name}
         </p>
         <h1>
           <span className="rot" key={i} aria-live="polite" aria-atomic="true">
@@ -46,7 +46,7 @@ export default function HeroSection() {
             View Resume
           </Button>
           <Badge tone="success" dot>
-            Open to Spring 2026
+            {portfolio.identity.availability}
           </Badge>
         </div>
       </div>

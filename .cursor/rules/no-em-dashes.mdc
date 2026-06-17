@@ -1,0 +1,31 @@
+---
+description: No em dashes in portfolio copy
+globs: portfolio-website/src/**/*.{js,jsx,ts,tsx,md},portfolio-website/CONTENT.md
+alwaysApply: false
+---
+
+# No em dashes in text
+
+Do not use em dashes (`—`, Unicode U+2014) in user-facing portfolio copy.
+
+## Use instead
+
+- **Date ranges:** `to` (e.g. `Aug 2024 to May 2026`, `2025 to Present`)
+- **Clarification or result:** comma, colon, or a short rewrite
+- **Greeting / title:** comma (e.g. `Hello, I'm` not `Hello — I'm`)
+
+## Examples
+
+```
+// BAD
+"ML systems — better entity extraction"
+"Aug 2024 — May 2026"
+"Hello — I'm Aaditey"
+
+// GOOD
+"ML systems: better entity extraction"
+"Aug 2024 to May 2026"
+"Hello, I'm Aaditey"
+```
+
+En dashes in proper names (e.g. `Bradley–Terry`) and middle dots in labels (e.g. `Modeling · ML`) are fine.

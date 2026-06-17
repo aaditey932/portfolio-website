@@ -57,7 +57,7 @@ export default function EducationSection() {
   return (
     <section id="education" className="block">
       <div className="wrap">
-        <SectionHeading index="02" eyebrow="Education" title="Studying AI at Duke." />
+        <SectionHeading index="02" eyebrow="Education" title="AI engineering at Duke." />
         <div className="grid2" style={{ marginTop: "var(--space-8)" }}>
           {portfolio.education.map((e) => (
             <EduStatCard key={e.school} e={e} />

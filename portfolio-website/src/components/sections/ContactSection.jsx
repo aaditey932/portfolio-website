@@ -18,7 +18,7 @@ export default function ContactSection() {
             className="lead-body"
             style={{ margin: "var(--space-5) auto 0", textAlign: "center" }}
           >
-            Open to Co-Op and full-time Applied AI / ML roles for Spring 2026. The fastest way to reach me is email.
+            {portfolio.identity.availabilityDetail}
           </p>
           <div className="ctarow" style={{ justifyContent: "center" }}>
             <Button

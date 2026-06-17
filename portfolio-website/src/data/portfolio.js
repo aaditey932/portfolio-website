@@ -3,16 +3,19 @@ const portfolio = {
     initials: "AP",
     name: "Aaditey Pillai",
     rotating: ["AI", "ML", "LLM", "SYSTEMS"],
-    tagline: "MEng in AI @ Duke University",
+    tagline: "MEng in AI · Duke University '26",
     blurb:
       "AI engineer building reliable, production LLM systems. Focused on evaluation, agentic pipelines, and AI that's useful, scalable, and quietly dependable.",
+    availability: "Seeking full-time roles",
+    availabilityDetail:
+      "Seeking full-time Applied AI / ML roles. The fastest way to reach me is email.",
     resumeUrl: "https://drive.google.com/file/d/1R3x5vcte2e9DqQlIo0EvBhloSTJUWFwu/view",
     github: "https://github.com/aaditey932",
     linkedin: "https://www.linkedin.com/in/aaditey-pillai/",
     email: "pillai.aaditey@gmail.com",
   },
   about:
-    "An inquisitive engineer pursuing a Master of Engineering (MEng) in Artificial Intelligence at Duke University, actively seeking Co-Op and full-time opportunities in AI for Spring 2026. Currently an AI Engineer Intern at PRGX Global, working on contract entity extraction and risk-scoring systems. Most motivated by turning messy, real-world data into reliable ML systems — better entity extraction, clearer model decisions, and pipelines that actually ship to production.",
+    "An inquisitive AI engineer with a Master of Engineering (MEng) in Artificial Intelligence from Duke University (May 2026), actively seeking full-time Applied AI / ML roles. Currently an AI Engineer Intern at PRGX Global, working on contract entity extraction and risk-scoring systems. Most motivated by turning messy, real-world data into reliable ML systems: better entity extraction, clearer model decisions, and pipelines that actually ship to production.",
   skills: {
     root: "MY SKILLS",
     clusters: [
@@ -82,13 +85,13 @@ const portfolio = {
     {
       school: "Duke University",
       degree: "M.Eng, Artificial Intelligence",
-      meta: "GPA 4.00 / 4.00 · Aug 2024 — May 2026",
+      meta: "GPA 4.00 / 4.00 · Aug 2024 to May 2026",
       courses: "Reinforcement Learning, LLMs, AI in the Physical World, Deep Learning Applications",
     },
     {
       school: "SRM Institute of Science & Technology",
       degree: "B.Tech, Electronics & Communications Engineering",
-      meta: "GPA 9.34 / 10.00 · Jun 2019 — May 2023",
+      meta: "GPA 9.34 / 10.00 · Jun 2019 to May 2023",
       courses: "Python, C, Computer Communication Networks",
     },
   ],
@@ -96,20 +99,20 @@ const portfolio = {
     {
       company: "PRGX Global",
       role: "AI Engineer Intern",
-      period: "2025 — Present",
+      period: "2025 to Present",
       logo: "/images/experiences/prgx-mark.png",
       summary: "Contract entity extraction & risk-scoring on a production LLM stack.",
       bullets: [
-        "Optimized a contract entity-extraction pipeline by benchmarking GPT-OSS 20B against a vLLM-deployed fine-tuned Mistral 7B with structured few-shot multi-turn prompting — 0.90 F1 on contract-number extraction over 242 contracts, productionized on Apache Kafka.",
+        "Optimized a contract entity-extraction pipeline by benchmarking GPT-OSS 20B against a vLLM-deployed fine-tuned Mistral 7B with structured few-shot multi-turn prompting, reaching 0.90 F1 on contract-number extraction over 242 contracts, productionized on Apache Kafka.",
         "Designed a risk-scoring engine that extracts risk clauses with GPT-4o-mini and learns clause-category weights via an OOP architecture of nested dataclasses (contract, document, supplier).",
-        "Trained the scoring model with a Bradley–Terry pairwise logistic-regression pipeline — 0.82 weighted Spearman rank correlation against SME rankings.",
+        "Trained the scoring model with a Bradley–Terry pairwise logistic-regression pipeline, achieving 0.82 weighted Spearman rank correlation against SME rankings.",
       ],
       tags: ["vLLM", "Mistral 7B", "GPT-4o-mini", "Flask", "Apache Kafka", "Azure Blob"],
     },
     {
       company: "Celusion Technologies",
       role: "Machine Learning Intern",
-      period: "2022 — 2023",
+      period: "2022 to 2023",
       logo: "/images/experiences/celusion_logo.jpg",
       summary: "Large-scale tabular ML pipelines from raw data to deployed models.",
       bullets: [
@@ -122,11 +125,11 @@ const portfolio = {
     {
       company: "BSE Technologies",
       role: "Cybersecurity Intern",
-      period: "2021 — 2022",
+      period: "2021 to 2022",
       logo: "/images/experiences/bse_logo.jpg",
       summary: "SIEM operations and incident response on IBM QRadar.",
       bullets: [
-        "Maintained 95% system uptime configuring and tuning an IBM QRadar SIEM — data sources, rules, and detections.",
+        "Maintained 95% system uptime configuring and tuning an IBM QRadar SIEM: data sources, rules, and detections.",
         "Investigated 50+ incidents at an average 4-hour resolution time.",
         "Integrated QRadar with two new security technologies to improve threat detection and cross-team workflows.",
       ],
@@ -137,7 +140,7 @@ const portfolio = {
     {
       title: "MedGraph Scheduler",
       blurb:
-        "Multi-agent doctor-appointment scheduler on AWS EC2 — a LangGraph supervisor/worker graph turning a spreadsheet into one conversational interface, with ReAct Groq/OpenAI agents validated by Pydantic schemas.",
+        "Multi-agent doctor-appointment scheduler on AWS EC2: a LangGraph supervisor/worker graph turning a spreadsheet into one conversational interface, with ReAct Groq/OpenAI agents validated by Pydantic schemas.",
       image: "/images/projects/duke-advisor.png",
       tags: ["AI", "Web"],
       stack: ["LangGraph", "FastAPI", "Groq", "Pydantic", "AWS EC2"],
@@ -147,7 +150,7 @@ const portfolio = {
     {
       title: "TubeGist AI",
       blurb:
-        "RAG chatbot that extracts and chunks YouTube transcripts, embeds with text-embedding-3-small, retrieves via FAISS, and answers with GPT-4o-mini — sub-second retrieval, no video download.",
+        "RAG chatbot that extracts and chunks YouTube transcripts, embeds with text-embedding-3-small, retrieves via FAISS, and answers with GPT-4o-mini for sub-second retrieval with no video download.",
       image: "/images/projects/nutrition-rag.png",
       tags: ["AI", "Web", "NLP"],
       stack: ["LangChain", "FAISS", "GPT-4o-mini"],
@@ -157,7 +160,7 @@ const portfolio = {
     {
       title: "Duke Student Advisor",
       blurb:
-        "Agentic chatbot for Duke programs, courses, professors, and events — multiple specialized tools and databases behind a Streamlit interface, backed by the OpenAI API.",
+        "Agentic chatbot for Duke programs, courses, professors, and events, with multiple specialized tools and databases behind a Streamlit interface, backed by the OpenAI API.",
       image: "/images/projects/duke-advisor.png",
       tags: ["AI", "Web"],
       stack: ["OpenAI", "Streamlit", "Agents"],
@@ -177,7 +180,7 @@ const portfolio = {
     {
       title: "Nutrition RAG Assistant",
       blurb:
-        "RAG system over human-nutrition research papers — Pinecone retrieval + GPT-4o generation behind Streamlit, making scientific knowledge searchable in plain language.",
+        "RAG system over human-nutrition research papers with Pinecone retrieval and GPT-4o generation behind Streamlit, making scientific knowledge searchable in plain language.",
       image: "/images/projects/nutrition-rag.png",
       tags: ["AI", "Web"],
       stack: ["Pinecone", "GPT-4o", "Streamlit"],
@@ -187,7 +190,7 @@ const portfolio = {
     {
       title: "LlaMa Resume Optimizer",
       blurb:
-        "Optimizes resumes against a job description with keyword matching, similarity scoring, and LLaMA 3 (LoRA fine-tuned) — ATS-friendly edits and a downloadable result via Streamlit.",
+        "Optimizes resumes against a job description with keyword matching, similarity scoring, and LLaMA 3 (LoRA fine-tuned) for ATS-friendly edits and a downloadable result via Streamlit.",
       image: "/images/projects/llama-optimizer.png",
       tags: ["AI", "Web", "NLP"],
       stack: ["LLaMA 3", "LoRA", "Streamlit"],
@@ -207,7 +210,7 @@ const portfolio = {
     {
       title: "Transformer From Scratch",
       blurb:
-        "A from-scratch Transformer in pure NumPy — multi-head self-attention, positional encoding, feed-forward networks, and masking — implementing 'Attention is All You Need' without any DL framework.",
+        "A from-scratch Transformer in pure NumPy with multi-head self-attention, positional encoding, feed-forward networks, and masking, implementing 'Attention is All You Need' without any DL framework.",
       image: "/images/projects/transformer.png",
       tags: ["NLP"],
       stack: ["NumPy", "Transformers"],

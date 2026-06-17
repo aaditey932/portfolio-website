@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Aaditey Pillai — AI Engineer",
+  title: "Aaditey Pillai, AI Engineer",
   description:
-    "Portfolio of Aaditey Pillai — AI engineer at Duke (MEng) building production LLM systems, agentic pipelines, and RAG.",
+    "Portfolio of Aaditey Pillai, Duke MEng '26 AI engineer building production LLM systems, agentic pipelines, and RAG.",
 };
 
 export default function RootLayout({ children }) {

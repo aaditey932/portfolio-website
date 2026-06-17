@@ -427,9 +427,12 @@ section.block:first-of-type { border-top: none; }
 /* ---------------------------------------------------------------------------
    Skills mind map
    --------------------------------------------------------------------------- */
+#skills.block {
+  padding: 128px 0;
+}
 .skillsMap {
   position: relative;
-  padding: 24px 0 8px;
+  padding: 32px 0 16px;
 }
 .skillsConn {
   position: absolute;
@@ -461,13 +464,13 @@ section.block:first-of-type { border-top: none; }
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   letter-spacing: 0.14em;
   color: var(--accent);
   background: var(--surface-sunken);
   border: 1px solid var(--line-accent);
   border-radius: var(--radius-md);
-  padding: 18px 42px;
+  padding: 20px 48px;
   box-shadow: 0 0 44px -10px var(--cyan-glow),
               inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
@@ -476,31 +479,31 @@ section.block:first-of-type { border-top: none; }
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 36px;
-  margin-top: 112px;
+  gap: 44px;
+  margin-top: 128px;
   align-items: start;
 }
-.skillsCluster--mid { margin-top: 96px; }
+.skillsCluster--mid { margin-top: 108px; }
 .skillsClusterCap {
   font-family: var(--font-mono);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
   color: var(--text-faint);
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 .skillsPills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 .skillPill {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   letter-spacing: var(--tracking-mono);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--line);
   color: var(--text-secondary);
@@ -652,7 +655,8 @@ section.block:first-of-type { border-top: none; }
     margin-top: 40px;
   }
   .skillsCluster--mid { margin-top: 0; }
-  .skillsRoot { font-size: 1rem; padding: 14px 28px; }
+  #skills.block { padding: 100px 0; }
+  .skillsRoot { font-size: 1.1rem; padding: 16px 32px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
